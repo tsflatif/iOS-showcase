@@ -31,7 +31,8 @@ class ViewController: UIViewController {
     @IBAction func fbBtnPressed(sender: UIButton!){
         let facebookLogin = FBSDKLoginManager()
         
-        facebookLogin.logInWithReadPermissions(["email"]) { (facebookResult: FBSDKLoginManagerLoginResult!, facebookError: NSError!) -> Void in
+        facebookLogin.logInWithReadPermissions(["email"], fromViewController: self) { (facebookResult: FBSDKLoginManagerLoginResult!, facebookError: NSError!) -> Void in
+
             if facebookError != nil {
                 print("Facebook login fialed. Error \(facebookError)")
             } else {
@@ -43,6 +44,10 @@ class ViewController: UIViewController {
                         print("Login failed. \(error)")
                     } else{
                         print("Yay! \(authData)")
+                        
+                        let user = ["provider": authData.provider!]
+                        DataService.ds.createFirebaseUser(authData.uid, user: user)
+                        
                         NSUserDefaults.standardUserDefaults().setValue(authData.uid, forKey: KEY_UID)
                         self.performSegueWithIdentifier(SEGUE_LOGGED_IN, sender: nil)
                     }
@@ -68,7 +73,11 @@ class ViewController: UIViewController {
                             } else {
                                 NSUserDefaults.standardUserDefaults().setValue(result[KEY_UID], forKey: KEY_UID)
                                 
-                                DataService.ds.REF_BASE.authUser(email, password: pwd, withCompletionBlock: nil)
+                                DataService.ds.REF_BASE.authUser(email, password: pwd, withCompletionBlock: { err , authData in
+                                    
+                                    let user = ["provider": authData.provider!]
+                                    DataService.ds.createFirebaseUser(authData.uid, user: user)
+                                })
                                 
                                 self.performSegueWithIdentifier(SEGUE_LOGGED_IN, sender: nil)
                             }

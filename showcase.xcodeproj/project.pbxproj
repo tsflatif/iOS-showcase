@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		43606BB91CB08D8100CA05D4 /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43606BB81CB08D8100CA05D4 /* DataService.swift */; };
+		43606BBB1CB5F82800CA05D4 /* FeedVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43606BBA1CB5F82800CA05D4 /* FeedVC.swift */; };
+		43E7498A1CB5F9690080DFB7 /* PostCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43E749891CB5F9690080DFB7 /* PostCell.swift */; };
+		43E7498C1CBB4D280080DFB7 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43E7498B1CBB4D280080DFB7 /* Post.swift */; };
 		43F1D3EA1C9E4A5400DB0C80 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43F1D3E91C9E4A5400DB0C80 /* AppDelegate.swift */; };
 		43F1D3EC1C9E4A5400DB0C80 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43F1D3EB1C9E4A5400DB0C80 /* ViewController.swift */; };
 		43F1D3EF1C9E4A5400DB0C80 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 43F1D3ED1C9E4A5400DB0C80 /* Main.storyboard */; };
@@ -30,6 +33,9 @@
 
 /* Begin PBXFileReference section */
 		43606BB81CB08D8100CA05D4 /* DataService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataService.swift; sourceTree = "<group>"; };
+		43606BBA1CB5F82800CA05D4 /* FeedVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedVC.swift; sourceTree = "<group>"; };
+		43E749891CB5F9690080DFB7 /* PostCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostCell.swift; sourceTree = "<group>"; };
+		43E7498B1CBB4D280080DFB7 /* Post.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
 		43F1D3E61C9E4A5400DB0C80 /* showcase.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = showcase.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		43F1D3E91C9E4A5400DB0C80 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		43F1D3EB1C9E4A5400DB0C80 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -106,7 +112,6 @@
 				43F1D3FF1C9E4CCA00DB0C80 /* view */,
 				43F1D3FE1C9E4CC300DB0C80 /* controller */,
 				43F1D3E91C9E4A5400DB0C80 /* AppDelegate.swift */,
-				43F1D3EB1C9E4A5400DB0C80 /* ViewController.swift */,
 				43F1D3ED1C9E4A5400DB0C80 /* Main.storyboard */,
 				43F1D3F31C9E4A5400DB0C80 /* Assets.xcassets */,
 				43F1D3F51C9E4A5400DB0C80 /* LaunchScreen.storyboard */,
@@ -119,6 +124,8 @@
 		43F1D3FE1C9E4CC300DB0C80 /* controller */ = {
 			isa = PBXGroup;
 			children = (
+				43F1D3EB1C9E4A5400DB0C80 /* ViewController.swift */,
+				43606BBA1CB5F82800CA05D4 /* FeedVC.swift */,
 			);
 			name = controller;
 			sourceTree = "<group>";
@@ -129,6 +136,7 @@
 				43F1D40A1C9E735C00DB0C80 /* MaterialView.swift */,
 				43F1D4111C9E76F500DB0C80 /* MaterialButton.swift */,
 				43F1D4131C9E794100DB0C80 /* MaterialTextField.swift */,
+				43E749891CB5F9690080DFB7 /* PostCell.swift */,
 			);
 			name = view;
 			sourceTree = "<group>";
@@ -136,6 +144,7 @@
 		43F1D4001C9E4CD000DB0C80 /* model */ = {
 			isa = PBXGroup;
 			children = (
+				43E7498B1CBB4D280080DFB7 /* Post.swift */,
 			);
 			name = model;
 			sourceTree = "<group>";
@@ -313,6 +322,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				43606BBB1CB5F82800CA05D4 /* FeedVC.swift in Sources */,
+				43E7498C1CBB4D280080DFB7 /* Post.swift in Sources */,
 				43F1D4101C9E73E700DB0C80 /* Constants.swift in Sources */,
 				43F1D3EC1C9E4A5400DB0C80 /* ViewController.swift in Sources */,
 				43F1D4121C9E76F500DB0C80 /* MaterialButton.swift in Sources */,
@@ -321,6 +332,7 @@
 				43F1D40B1C9E735C00DB0C80 /* MaterialView.swift in Sources */,
 				43F1D4141C9E794100DB0C80 /* MaterialTextField.swift in Sources */,
 				43606BB91CB08D8100CA05D4 /* DataService.swift in Sources */,
+				43E7498A1CB5F9690080DFB7 /* PostCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
