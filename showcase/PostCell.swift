@@ -20,12 +20,12 @@ class PostCell: UITableViewCell {
     
     var post: Post!
     var request: Request?
-    var likeRef: Firebase!
+    var likeRef: FIRDatabaseReference!
     
     override func awakeFromNib() {
         super.awakeFromNib()
         
-        let tap = UITapGestureRecognizer(target: self, action: "likeTapped:")
+        let tap = UITapGestureRecognizer(target: self, action: #selector(PostCell.likeTapped))
         tap.numberOfTapsRequired = 1
         likeImage.addGestureRecognizer(tap)
         likeImage.userInteractionEnabled = true
